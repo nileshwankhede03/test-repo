@@ -14,7 +14,8 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class CustomUserDetailsService implements UserDetailsService 
 {
-    private final UserRepository userRepository;
+	
+    private final UserRepository userRepository = null;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         AppUser u = userRepository.findByUsername(username)

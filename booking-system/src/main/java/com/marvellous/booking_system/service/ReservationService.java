@@ -17,9 +17,9 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class ReservationService {
-    private final ReservationRepository reservationRepository;
-    private final ResourceRepository resourceRepository;
-    private final UserRepository userRepository;
+    private final ReservationRepository reservationRepository = null;
+    private final ResourceRepository resourceRepository = null ;
+    private final UserRepository userRepository = null ;
 
     @Transactional
     public ReservationDto create(CreateReservationRequest req, Authentication auth) {

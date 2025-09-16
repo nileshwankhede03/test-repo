@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class ResourceService {
-    private final ResourceRepository repo;
+    private final ResourceRepository repo = null;
 
     public Page<ResourceDto> list(int page, int size, Sort sort) {
         Pageable p = PageRequest.of(page, size, sort);

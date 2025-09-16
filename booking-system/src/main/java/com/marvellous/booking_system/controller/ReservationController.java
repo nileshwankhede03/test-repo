@@ -16,7 +16,7 @@ import java.util.Optional;
 @RequestMapping("/reservations")
 @RequiredArgsConstructor
 public class ReservationController {
-    private final ReservationService service;
+    private final ReservationService service = null;
 
     @GetMapping
     public ResponseEntity<?> list(

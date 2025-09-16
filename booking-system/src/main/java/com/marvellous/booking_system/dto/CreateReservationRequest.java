@@ -26,4 +26,76 @@ public class CreateReservationRequest {
 
     @NotNull
     private Instant endTime;
+
+	public Long getResourceId() {
+		return resourceId;
+	}
+
+	public void setResourceId(Long resourceId) {
+		this.resourceId = resourceId;
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+	public ReservationStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(ReservationStatus status) {
+		this.status = status;
+	}
+
+	public BigDecimal getPrice() {
+		return price;
+	}
+
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
+
+	public Instant getStartTime() {
+		return startTime;
+	}
+
+	public void setStartTime(Instant startTime) {
+		this.startTime = startTime;
+	}
+
+	public Instant getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(Instant endTime) {
+		this.endTime = endTime;
+	}
+
+	public CreateReservationRequest(@NotNull Long resourceId, Long userId, @NotNull ReservationStatus status,
+			@NotNull @DecimalMin("0.0") BigDecimal price, @NotNull Instant startTime, @NotNull Instant endTime) {
+		super();
+		this.resourceId = resourceId;
+		this.userId = userId;
+		this.status = status;
+		this.price = price;
+		this.startTime = startTime;
+		this.endTime = endTime;
+	}
+
+	public CreateReservationRequest() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "CreateReservationRequest [resourceId=" + resourceId + ", userId=" + userId + ", status=" + status
+				+ ", price=" + price + ", startTime=" + startTime + ", endTime=" + endTime + "]";
+	}
+    
+    
 }

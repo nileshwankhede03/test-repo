@@ -14,11 +14,12 @@ import java.util.Set;
 
 @Component
 @RequiredArgsConstructor
-public class DataSeeder implements CommandLineRunner {
-    private final UserRepository userRepository;
-    private final ResourceRepository resourceRepository;
-    private final ReservationRepository reservationRepository;
-    private final PasswordEncoder passwordEncoder;
+public class DataSeeder implements CommandLineRunner 
+{
+    private final UserRepository userRepository = null;
+    private final ResourceRepository resourceRepository = null;
+    private final ReservationRepository reservationRepository = null;
+    private final PasswordEncoder passwordEncoder = null;
 
     @Override
     public void run(String... args) throws Exception {

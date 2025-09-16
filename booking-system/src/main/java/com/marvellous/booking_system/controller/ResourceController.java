@@ -13,7 +13,7 @@ import jakarta.validation.Valid;
 @RequestMapping("/resources")
 @RequiredArgsConstructor
 public class ResourceController {
-    private final ResourceService service;
+    private final ResourceService service = null;
 
     @GetMapping
     public ResponseEntity<?> list(

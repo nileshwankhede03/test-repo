@@ -4,6 +4,7 @@ import com.marvellous.booking_system.security.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.*;
 import org.springframework.security.authentication.*;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -16,8 +17,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableMethodSecurity
 public class SecurityConfig {
 
-    private final JwtTokenProvider tokenProvider;
-    private final CustomUserDetailsService userDetailsService;
+    private final JwtTokenProvider tokenProvider = null;
+    private final CustomUserDetailsService userDetailsService = null;
 
     @Bean
     public PasswordEncoder passwordEncoder() {

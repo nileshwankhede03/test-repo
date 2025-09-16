@@ -13,8 +13,8 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class AuthService {
-    private final AuthenticationManager authenticationManager;
-    private final JwtTokenProvider tokenProvider;
+    private final AuthenticationManager authenticationManager = null;
+    private final JwtTokenProvider tokenProvider = null;
 
     public AuthResponse login(AuthRequest request) {
         Authentication auth = authenticationManager.authenticate(
@@ -25,5 +25,5 @@ public class AuthService {
                 .collect(Collectors.toList());
         String token = tokenProvider.createToken(auth.getName(), authorities);
         return new AuthResponse(token, auth.getName());
-    }
+    }	
 }
