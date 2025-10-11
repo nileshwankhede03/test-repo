@@ -1,0 +1,171 @@
+
+@font-face {
+    font-family: fontuserdefined;
+    src: url(./../KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2);
+}
+@mixin flexCenter()
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: fontuserdefined;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 460px 1fr;
+    grid-template-rows: 90px 1fr 1.9fr;
+
+    grid-template-areas: "nav-header nav-header"
+                         "left-data right-data"
+                         "figure-and-data figure-and-data";
+    
+/* page 1 :  nav-bar css  */
+
+nav{
+    grid-area: nav-header;
+    height: 90px;
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 44px;
+    padding: 50px 140px;
+
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+nav .nav-bar-left img{
+    height: 35px;
+    width: 35px;
+}
+
+nav .nav-bar-left h3{
+    color: black;
+    font-weight: 900;
+    font-size: 25px;
+    display: inline-block;
+    align-items: center;
+    font-weight: 900;
+    margin-left: 42px;
+    position: absolute;
+    left: 9.5%;
+    top: 32px;
+}
+
+nav .nav-bar-center a{
+    font-size: 17px;
+    text-decoration: none;
+    color: black;
+    margin-left: 35px;
+    font-weight: 200;
+}
+
+nav .nav-bar-right button{
+    background-color: #0360FC;
+    color: aliceblue;
+    padding: 14px 26px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+nav .nav-bar-right #sign-up{
+    background-color: #FFFFFF;
+    color: #3F7CD7;
+    border: 1px solid #3F7CD7;
+}
+
+    section{
+        grid-area: figure-and-data;
+        background-color:#064ad1;
+        // #F6F7F9
+        border-radius: 20px;
+
+    }
+
+        #left-top-data{
+            grid-area: left-data;
+            background-color:#F6F7F9;
+            
+            h1{
+                font-family: fontuserdefined;
+                font-size: 50px;
+                color: black;
+                padding: 40px 40px;
+                font-weight: 300;
+            }
+        }
+
+        #right-top-data{
+            grid-area: right-data;
+            background-color: #F6F7F9;
+
+            #free-trial-btn{
+                background-color: #FFFFFF;
+                color: #3F7CD7;
+                border: 1px solid #3F7CD7;
+            }
+
+            button{
+                background-color: #0360FC;
+                color: aliceblue;
+                padding: 14px 26px;
+                border: none;
+                border-radius: 50px;
+                font-size: 16px;
+                margin-right: 10px;
+            }
+
+            p{
+                color: #8B8C8E;
+                margin: 20px 40px;
+                font-size: 19px;
+                font-weight: 100;
+            }
+
+            button{
+                margin: 5px 40px;
+                margin-right: -27px;
+            }
+        }
+
+        #outer{
+            grid-area: figure-and-data;
+            background-color: #F6F7F9;
+            #inner{
+                margin:10px 70px;
+                height: 94%;
+                width: 90%;
+                
+                img{
+                    height: 100%;
+                    width: 100%;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 20px;
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+}
